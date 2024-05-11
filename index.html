@@ -1,247 +1,252 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Ludo Game - CSS Grid</title>
-  <style>
-    .grid-container {
-        width: 759px;
-        height: 759px;
-display: grid;
-grid-template-columns: 2fr 1fr 2fr;
-grid-template-rows: 2fr 1fr 2fr;
-grid-column-gap: 0px;
-grid-row-gap: 0px;
-      border: 5px solid #333;
-      position: relative;
-      padding: 5px;
-    }
-    /* .div1 { grid-area: 3 / 1 / 4 / 2; } */
-    .grid-item {
-      background-color: #ccc;
-      /* border: 1px solid #000; */
-      /* padding: 20px; */
-      text-align: center;
-      position: relative;
-    }
-    .grid-item.top-left,
-    .grid-item.top-right,
-    .grid-item.bottom-left,
-    .grid-item.bottom-right {
-      width: 300px;
-      height: 300px;      
-      border: 1px solid #000;
-      padding: 50px;
-      box-sizing: border-box;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ludo Game - CSS Grid</title>
+    <style>
+        .grid-container {
+            width: 759px;
+            height: 759px;
+            display: grid;
+            grid-template-columns: 2fr 1fr 2fr;
+            grid-template-rows: 2fr 1fr 2fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            border: 5px solid #333;
+            position: relative;
+            padding: 5px;
+        }
 
-    .grid-item.path-v {
-        width: 150px!important;
-        height: 300px!important;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
-    }
-    
-    .grid-item.path-h {
-        width: 300px!important;
-        height: 150px!important;
-        grid-template-rows: 1fr 1fr 1fr;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    }
+        /* .div1 { grid-area: 3 / 1 / 4 / 2; } */
+        .grid-item {
+            background-color: #ccc;
+            /* border: 1px solid #000; */
+            /* padding: 20px; */
+            text-align: center;
+            position: relative;
+        }
 
-    .grid-item.center {
-        width: 150px;
-        height: 150px;
-        border: 1px solid #333;
-        background-color: #fff;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
+        .grid-item.top-left,
+        .grid-item.top-right,
+        .grid-item.bottom-left,
+        .grid-item.bottom-right {
+            width: 300px;
+            height: 300px;
+            border: 1px solid #000;
+            padding: 50px;
+            box-sizing: border-box;
+        }
 
-    .grid-item {
-        display: grid;
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        gap: 0px;
-    }
+        .grid-item.path-v {
+            width: 150px !important;
+            height: 300px !important;
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+        }
 
-    .grid-item > div {
-        border: 1px solid #000;
-        background-color: #fff;
-    }
+        .grid-item.path-h {
+            width: 300px !important;
+            height: 150px !important;
+            grid-template-rows: 1fr 1fr 1fr;
+            grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        }
 
-    .bg-blue {
-        background-color: blue!important;
-    }
+        .grid-item.center {
+            width: 150px;
+            height: 150px;
+            border: 1px solid #333;
+            background-color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-    .bg-yellow {
-        background-color: yellow!important;
-    }
+        .grid-item {
+            display: grid;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            gap: 0px;
+        }
 
-    .bg-green {
-        background-color: green!important;
-    }
+        .grid-item>div {
+            border: 1px solid #000;
+            background-color: #fff;
+        }
 
-    .bg-red {
-        background-color: red!important;
-    }
+        .bg-blue {
+            background-color: blue !important;
+        }
 
-    .center-block {
-        background-color: inherit;
-        display: grid;
-        grid-column-gap: 0px;
-        grid-row-gap: 0px;
-        grid-template-rows: 1fr 1fr;
-        grid-template-columns: 1fr 1fr;
-        place-items: center;
-        place-content: center;
-        align-items: center;
-        box-sizing: border-box;
-        padding: 20px;
-    }
+        .bg-yellow {
+            background-color: yellow !important;
+        }
 
-    .center-block > div {
-        width: 48px;
-        height: 48px;
-        border: 1px solid #333;
-    }
-  </style>
+        .bg-green {
+            background-color: green !important;
+        }
+
+        .bg-red {
+            background-color: red !important;
+        }
+
+        .center-block {
+            background-color: inherit;
+            display: grid;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            grid-template-rows: 1fr 1fr;
+            grid-template-columns: 1fr 1fr;
+            place-items: center;
+            place-content: center;
+            align-items: center;
+            box-sizing: border-box;
+            padding: 20px;
+        }
+
+        .center-block>div {
+            width: 48px;
+            height: 48px;
+            border: 1px solid #333;
+        }
+    </style>
 </head>
+
 <body>
 
-<div class="grid-container">
-    <!-- BLUE -->
-  <div class="grid-item top-left bg-blue">
-    <div class="center-block">
-        <div class="bg-blue"></div>
-        <div class="bg-blue"></div>
-        <div class="bg-blue"></div>
-        <div class="bg-blue"></div>
-    </div>
-  </div>
-  <!-- RED PATH -->
-  <div class="grid-item path-v">
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div class="bg-red"></div>
-    <div class="bg-red"></div>
-    <div></div>
-    <div class="bg-red"></div>
-    <div></div>
-    <div></div>
-    <div class="bg-red"></div>
-    <div></div>
-    <div></div>
-    <div class="bg-red"></div>
-    <div></div>
-    <div></div>
-    <div class="bg-red"></div>
-    <div></div>
-  </div>
-  <!-- RED -->
-  <div class="grid-item top-right bg-red">
-    <div class="center-block">
-        <div class="bg-red"></div>
-        <div class="bg-red"></div>
-        <div class="bg-red"></div>
-        <div class="bg-red"></div>
-    </div>
-  </div>
-  <!-- BLUE PATH -->
-  <div class="grid-item path-h">
-    <div></div>
-    <div class="bg-blue"></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div class="bg-blue"></div>
-    <div class="bg-blue"></div>
-    <div class="bg-blue"></div>
-    <div class="bg-blue"></div>
-    <div class="bg-blue"></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-  <!-- CENTER HOME -->
-  <div class="grid-item center">
-    HOME
-  </div>
+    <div class="grid-container">
+        <!-- BLUE -->
+        <div class="grid-item top-left bg-blue">
+            <div class="center-block">
+                <div class="bg-blue"></div>
+                <div class="bg-blue"></div>
+                <div class="bg-blue"></div>
+                <div class="bg-blue"></div>
+            </div>
+        </div>
+        <!-- RED PATH -->
+        <div class="grid-item path-v">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="bg-red"></div>
+            <div class="bg-red"></div>
+            <div></div>
+            <div class="bg-red"></div>
+            <div></div>
+            <div></div>
+            <div class="bg-red"></div>
+            <div></div>
+            <div></div>
+            <div class="bg-red"></div>
+            <div></div>
+            <div></div>
+            <div class="bg-red"></div>
+            <div></div>
+        </div>
+        <!-- RED -->
+        <div class="grid-item top-right bg-red">
+            <div class="center-block">
+                <div class="bg-red"></div>
+                <div class="bg-red"></div>
+                <div class="bg-red"></div>
+                <div class="bg-red"></div>
+            </div>
+        </div>
+        <!-- BLUE PATH -->
+        <div class="grid-item path-h">
+            <div></div>
+            <div class="bg-blue"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="bg-blue"></div>
+            <div class="bg-blue"></div>
+            <div class="bg-blue"></div>
+            <div class="bg-blue"></div>
+            <div class="bg-blue"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <!-- CENTER HOME -->
+        <div class="grid-item center">
+            HOME
+        </div>
 
-  <!-- GREEN PATH -->
-  <div class="grid-item path-h">
-    
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div class="bg-green"></div>
-    <div class="bg-green"></div>
-    <div class="bg-green"></div>
-    <div class="bg-green"></div>
-    <div class="bg-green"></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div class="bg-green"></div>
-    <div></div>
-  </div>
+        <!-- GREEN PATH -->
+        <div class="grid-item path-h">
 
-  <!-- YELLOW -->
-  <div class="grid-item bottom-left bg-yellow">
-    <div class="center-block">
-        <div class="bg-yellow"></div>
-        <div class="bg-yellow"></div>
-        <div class="bg-yellow"></div>
-        <div class="bg-yellow"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="bg-green"></div>
+            <div class="bg-green"></div>
+            <div class="bg-green"></div>
+            <div class="bg-green"></div>
+            <div class="bg-green"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="bg-green"></div>
+            <div></div>
+        </div>
+
+        <!-- YELLOW -->
+        <div class="grid-item bottom-left bg-yellow">
+            <div class="center-block">
+                <div class="bg-yellow"></div>
+                <div class="bg-yellow"></div>
+                <div class="bg-yellow"></div>
+                <div class="bg-yellow"></div>
+            </div>
+        </div>
+
+        <!-- YELLOW PATH -->
+        <div class="grid-item path-v">
+            <div></div>
+            <div class="bg-yellow"></div>
+            <div></div>
+            <div></div>
+            <div class="bg-yellow"></div>
+            <div></div>
+            <div></div>
+            <div class="bg-yellow"></div>
+            <div></div>
+            <div></div>
+            <div class="bg-yellow"></div>
+            <div></div>
+            <div class="bg-yellow"></div>
+            <div class="bg-yellow"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <!-- GREEN -->
+        <div class="grid-item bottom-right bg-green">
+            <div class="center-block">
+                <div class="bg-green"></div>
+                <div class="bg-green"></div>
+                <div class="bg-green"></div>
+                <div class="bg-green"></div>
+            </div>
+        </div>
     </div>
-  </div>
-
-  <!-- YELLOW PATH -->
-  <div class="grid-item path-v">
-    <div></div>
-    <div class="bg-yellow"></div>
-    <div></div>
-    <div></div>
-    <div class="bg-yellow"></div>
-    <div></div>
-    <div></div>
-    <div class="bg-yellow"></div>
-    <div></div>
-    <div></div>
-    <div class="bg-yellow"></div>
-    <div></div>
-    <div class="bg-yellow"></div>
-    <div class="bg-yellow"></div>
-    <div></div>
-    <div></div>
-    <div></div>
-    <div></div>
-  </div>
-
-  <!-- GREEN -->
-  <div class="grid-item bottom-right bg-green">
-    <div class="center-block">
-        <div class="bg-green"></div>
-        <div class="bg-green"></div>
-        <div class="bg-green"></div>
-        <div class="bg-green"></div>
-    </div>
-  </div>
-</div>
 
 </body>
+
 </html>
